@@ -1,4 +1,4 @@
-.cowboy.plt
+*.plt
 .erlang.mk.packages.*
 _rel
 deps
