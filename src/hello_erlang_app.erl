@@ -9,7 +9,8 @@ start(_Type, _Args) ->
     Dispatch = cowboy_router:compile([{'_', [
         {"/", hello_handler, []},
         {"/chunked", chunked_handler, []},
-        {"/echo", echo_handler, []}
+        {"/echo", echo_handler, []},
+        {"/echo_post", echo_post_handler, []}
     ]}]),
     {ok, _} = cowboy:start_http(http, 100, [{port, 8080}], [
         {env, [{dispatch, Dispatch}]}
